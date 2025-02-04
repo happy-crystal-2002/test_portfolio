@@ -17,21 +17,22 @@ export default function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    return
 
-    try {
-      setIsSending(true);
+    // try {
+    //   setIsSending(true);
 
-      await emailjs.sendForm(
-        process.env.EMAIL_SERVICE_ID,
-        process.env.EMAIL_TEMPLATE_ID,
-        formRef.current,
-        process.env.PUBLIC_KEY
-      );
-    } catch (error) {
-      // intentional
-    } finally {
-      setIsSending(false);
-    }
+    //   await emailjs.sendForm(
+    //     process.env.EMAIL_SERVICE_ID,
+    //     process.env.EMAIL_TEMPLATE_ID,
+    //     formRef.current,
+    //     process.env.PUBLIC_KEY
+    //   );
+    // } catch (error) {
+    //   // intentional
+    // } finally {
+    //   setIsSending(false);
+    // }
   };
   return (
     <section className="container mx-auto mt-5 px-5 pt-12 pb-10">
